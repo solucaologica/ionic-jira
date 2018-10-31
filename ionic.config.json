@@ -1,0 +1,7 @@
+{
+  "name": "jiraia",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
