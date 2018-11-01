@@ -1,26 +1,28 @@
 import { Injectable } from '@angular/core';
+import { User } from '../../app/shared/user.model';
 
 let USER_DATA = "user";
 
 @Injectable()
 export class ConfigProvider {
   constructor() {
-
   }
 
-  getConfigData(): any {
-    return localStorage.getItem(USER_DATA);
+  getUserData(): User {
+    let user: User = JSON.parse(localStorage.getItem('user'));
+    return user;
   }
 
-  setConfigData(
-    name?: string, key?: string, email?: string, avatar?: string, token?: string, active?: boolean
-  ) {
-    let user = {
-      name: '', key: '',
-      email: '', avatar: '',
-      token: '', active: false
-    };
-
+  setUserData(
+    token?: string,
+    name?: string,
+    key?: string,
+    email?: string,
+    avatar?: string
+  ): User {
+    let user: User = new User();
+    if (token)
+      user.token = token;
     if (name)
       user.name = name;
     if (key)
@@ -29,12 +31,12 @@ export class ConfigProvider {
       user.email = email;
     if (avatar)
       user.avatar = avatar;
-    if (token)
-      user.token = token
-    if (active)
-      user.active = active;
 
     localStorage.setItem(USER_DATA, JSON.stringify(user));
-  }
 
+    return user;
+  }
+  
+  /*
+  */
 }

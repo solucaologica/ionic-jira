@@ -7,29 +7,30 @@ import { LoginPage } from '../pages/login/login';
 import { ConfigProvider } from '../providers/config/config';
 import { HomePage } from '../pages/home/home';
 import { UserServiceProvider } from '../providers/user-service/user-service';
+import { User } from './shared/user.model';
 @Component({
   templateUrl: 'app.html',
-  providers:[
+  providers: [
     ConfigProvider,
     UserServiceProvider
   ]
 })
 export class MyApp {
-  rootPage:any;
+  rootPage: any;
 
   constructor(
-    platform: Platform, 
-    statusBar: StatusBar, 
-    splashScreen: SplashScreen,
-    configProvider:ConfigProvider
-    ) {
+    platform: Platform,
+    statusBar: StatusBar,
+    splashScreen: SplashScreen
+  ) {
     platform.ready().then(() => {
+      let user: User = JSON.parse(localStorage.getItem('user'));
 
-      let user = configProvider.getConfigData();
-      if(user == null)
+      if (user == null)
         this.rootPage = LoginPage;
       else
         this.rootPage = HomePage;
+        
       statusBar.styleDefault();
       splashScreen.hide();
     });

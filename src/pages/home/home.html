@@ -1,25 +1,27 @@
 <ion-content padding>
-    <ion-card>
-      <div class="profilepic">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbpIjiCnWi2oBFtaYMWviRSln6ATUUe92G7PElB6mqAFzRxLaeuQ"/>
-        <ion-card-content>
-          <ion-card-title>
-            Bem vindo, <strong>Bruno</strong>
-          </ion-card-title>
-          <ion-card-header>
-            Menu
-          </ion-card-header>
-          <ion-list>
-            <button ion-item>
-                <ion-icon name="briefcase"></ion-icon>
-                Projetos
-            </button>
-            <button ion-item>
-                <ion-icon name="md-power"></ion-icon>
-                Sair
-            </button>
-          </ion-list>
-        </ion-card-content>
-      </div>
-      </ion-card>
+  <ion-card>
+    <div class="profilepic">
+      <img [src]=user.avatar />
+      <ion-card-content>
+        <ion-card-title>
+          Bem vindo, <strong>{{user.name}}</strong>
+        </ion-card-title>
+        <ion-card-header>
+          Menu
+        </ion-card-header>
+        <ion-list>
+          <button ion-item>
+            <ion-icon name="briefcase"></ion-icon>
+            Projetos
+          </button>
+
+          <button ion-item (click)="logOff()">
+            <ion-icon name="md-power"></ion-icon>
+            Sair
+          </button>
+
+        </ion-list>
+      </ion-card-content>
+    </div>
+  </ion-card>
 </ion-content>
