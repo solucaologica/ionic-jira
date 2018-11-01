@@ -1,0 +1,22 @@
+<ion-content padding center text-center>
+  <ion-card>
+      <ion-card-title>Jiraia::</ion-card-title>
+      <img src="https://atginfo.com/wp-content/uploads/2016/10/Agile-logo.png">
+    </ion-card>
+    <div class="login">
+
+      <ion-list>
+        <ion-item>
+          <ion-label>e-mail</ion-label>
+          <ion-input placeholder="youremail@provider.com" [(ngModel)]="username"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>password</ion-label>
+          <ion-input placeholder="******" required type="password" [(ngModel)]="pass"></ion-input>
+        </ion-item>
+      </ion-list>
+      <button ion-button full (click)="logIn()">Log in<ion-icon name="person"></ion-icon></button>
+    
+    </div>
+
+</ion-content>

@@ -3,5 +3,11 @@
   "integrations": {
     "cordova": {}
   },
-  "type": "ionic-angular"
+  "type": "ionic-angular",
+  "proxies":[
+    {
+      "path":"/myself",
+      "proxyUrl":"https://gestaostefanini.atlassian.net/rest/api/2/myself"
+    }
+  ]
 }

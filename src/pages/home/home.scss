@@ -1,3 +1,24 @@
 page-home {
+    ion-card img {
+        display: block;
+        top: 50%;
+        left: 65%;
+        position: absolute;
+        margin-top: -45vh;
+        margin-left: -20vh;
+        width: 25vh;
+        height: 25vh;
+    }
 
+    .card-content-ios {
+        padding: 13px 16px 14px;
+        font-size: 1.4rem;
+        line-height: 1.4;
+        margin-top: 23vh;
+    }
+
+    .scroll-content {
+        padding: 9px;
+        background-color: lightblue;
+    }
 }

@@ -1,0 +1,27 @@
+page-login {
+    ion-title * {
+        margin-top: 30vh;
+        margin-bottom: 5vh;
+    }
+    ion-icon::before {
+        display: inline-block;
+        margin-left: 3vh;
+    }
+
+    .button-full-ios {
+        border-radius: 7px;
+        margin-left: 12vh;
+        width: 25vh;
+    }
+    ion-card img {
+        display: block;
+        width: 30vh;
+        position: absolute;
+        left: 13vh;
+        margin-top:2vh;
+    }
+
+    .login{
+        margin-top: 30vh;
+    }
+}
